@@ -41,7 +41,7 @@ API-MSD-Z Get download links to various jars/forks from minecraft server
 
 ## 🛠 Downloading repo, cd path and install requirements:
 ```console
-git clone https://github.com/M20191/{} && cd {} && pip install -r requirements.txt
+git clone https://github.com/M20191/API-MSD-Z && cd API-MSD-Z && pip install -r requirements.txt
 ```
 
 ## 🖥 How to run Main file in Linux:
@@ -50,6 +50,7 @@ python3 .\main.py
 ```
 
 ### ⚙ Future To-do List:
+- [ ] Wiki 
 - [x] Improved code
 - [x] File documentation
 - [x] Document Better
