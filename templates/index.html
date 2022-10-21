@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <title>API-MSD-Z</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto+Condensed:wght@300;400;700&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="principaldiv-header">
+
+            <div class="secondarydiv-header">
+
+                <div class="headerimg">
+                    <img class="img_headerlogo" src="{{url_for('static',filename='img/imglogonice.png')}}">
+                </div>
+
+                <div class="header-div-nav-links">
+                    <nav class="header-nav-links">
+                        <ul class="container-ul">
+                            {% for header,version in zip(versions_header,versions_header_vars) %}
+                            <li>
+                                <h2 style="text-transform: uppercase">{{header}}</h2>
+                                <ul class="ul-dropdown">
+                                    {% for ver in version %}
+                                    <li>{{ver}}</li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                            {% endfor %}
+
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header-div-hamburger">
+                    <button class="button-hamburger"><img class="img-hamburger"
+                            src="https://www.minecraft.net/content/dam/games/minecraft/logos/hamburger-icon.png" alt="">
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </header>
+    <div class="divsection">
+        <section class="section-1">
+            <!-- https://wall.alphacoders.com/ FROM IMAGES-->
+            <div class="container" style="background-image: url({{image}});">
+                <div class="container-img-text">
+                    <h1>API-MSD-Z</h1>
+                    <P>Descarga cualquier versión de jar-fork para servidores de minecraft totalmente actualizado a la
+                        ultima versión y optimiza tu tiempo con esta API sencilla
+                    </P>
+                    <a class=" a-link-api" href="https://github.com/M20191/api-msd-z" role="link" target="blank">
+                        Source Code
+                    </a><br>
+                    <br>
+                    <a class="a-link-api" href="https://github.com/M20191/api-msd-z/wiki" role="link" target="blank">
+                        Wiki
+                    </a>
+                </div>
+
+            </div>
+
+    </div>
+    </section>
+    <div class="versions__container">
+        <article class="versions__article">
+
+            {% for header,version in zip(versions_header,versions_header_vars) %}
+            <section class="version__section closed">
+                <button id="button__section0">
+                    <h2 style="text-transform: uppercase;">{{header}}</h2><img
+                        src="{{url_for('static',filename='img/drop_arrow.png')}}" style="height:10px ;">
+                </button>
+                {% for ver in version %}
+                <a href="{{header}}/{{ver}}">{{ver}}</a>
+                {% endfor %}
+
+            </section>
+            {% endfor %}
+
+        </article>
+    </div>
+    <script defer src="{{url_for('static',filename='js/main.js')}}"></script>
+</body>
+
+</html>

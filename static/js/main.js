@@ -1,0 +1,2 @@
+let content = document.querySelectorAll(".version__section");
+document.querySelectorAll('.version__section').forEach(content => {content.addEventListener('click', event => {content.classList.toggle("closed")})})
