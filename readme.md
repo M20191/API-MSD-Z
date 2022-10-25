@@ -39,6 +39,8 @@ API-MSD-Z Get download links to various jars/forks from minecraft server
 ## ⭐ New Features!
 * Sponge (all versions)
 
+---
+
 ## 🛠 Downloading repo, cd path and install requirements:
 ```console
 git clone https://github.com/M20191/API-MSD-Z && cd API-MSD-Z && pip install -r requirements.txt
